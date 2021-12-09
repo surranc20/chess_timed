@@ -1,0 +1,61 @@
+logic package
+=============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   logic.pieces
+
+Submodules
+----------
+
+logic.board module
+------------------
+
+.. automodule:: logic.board
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+logic.colors module
+-------------------
+
+.. automodule:: logic.colors
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+logic.game module
+-----------------
+
+.. automodule:: logic.game
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+logic.player module
+-------------------
+
+.. automodule:: logic.player
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+logic.square module
+-------------------
+
+.. automodule:: logic.square
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: logic
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,470 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>logic package &#8212; Terminal Chess 0.1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="logic.pieces package" href="logic.pieces.html" />
+    <link rel="prev" title="logic" href="modules.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="logic.pieces.html" title="logic.pieces package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="logic"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Terminal Chess 0.1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">logic</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">logic package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="logic-package">
+<h1>logic package<a class="headerlink" href="#logic-package" title="Permalink to this headline">¶</a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="logic.pieces.html">logic.pieces package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="logic.pieces.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.pieces.html#module-logic.pieces.bishop">logic.pieces.bishop module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.pieces.html#module-logic.pieces.king">logic.pieces.king module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.pieces.html#module-logic.pieces.knight">logic.pieces.knight module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.pieces.html#module-logic.pieces.pawn">logic.pieces.pawn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.pieces.html#module-logic.pieces.piece">logic.pieces.piece module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.pieces.html#module-logic.pieces.queen">logic.pieces.queen module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.pieces.html#module-logic.pieces.rook">logic.pieces.rook module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.pieces.html#module-logic.pieces">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-logic.board">
+<span id="logic-board-module"></span><h2>logic.board module<a class="headerlink" href="#module-logic.board" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="logic.board.Board">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">logic.board.</span></span><span class="sig-name descname"><span class="pre">Board</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player_2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.board.Board" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Board class that stores all the chess pieces.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.board.Board.move_on_board">
+<span class="sig-name descname"><span class="pre">move_on_board</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.board.Board.move_on_board" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see if a move is on the board</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>Int</em>) – X location</p></li>
+<li><p><strong>y</strong> (<em>Int</em>) – Y location</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Whether or not an (x, y) pair is on the board</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.board.Board.place_initial_pieces">
+<span class="sig-name descname"><span class="pre">place_initial_pieces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#logic.board.Board.place_initial_pieces" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Creates a dictionary with chess pieces and their start locations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Dictionary with pieces and their locations</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-logic.colors">
+<span id="logic-colors-module"></span><h2>logic.colors module<a class="headerlink" href="#module-logic.colors" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="logic.colors.Colors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">logic.colors.</span></span><span class="sig-name descname"><span class="pre">Colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.colors.Colors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Colors for the board and pieces.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="logic.colors.Colors.BLACK">
+<span class="sig-name descname"><span class="pre">BLACK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Black'</span></em><a class="headerlink" href="#logic.colors.Colors.BLACK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="logic.colors.Colors.WHITE">
+<span class="sig-name descname"><span class="pre">WHITE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'White'</span></em><a class="headerlink" href="#logic.colors.Colors.WHITE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-logic.game">
+<span id="logic-game-module"></span><h2>logic.game module<a class="headerlink" href="#module-logic.game" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="logic.game.Game">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">logic.game.</span></span><span class="sig-name descname"><span class="pre">Game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player_2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.game.Game" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Game class that contains the main function for the chess game (move).
+The main function in main.py simply runs move over and over again until
+the game is over.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.game.Game.can_escape">
+<span class="sig-name descname"><span class="pre">can_escape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.game.Game.can_escape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether or not a player can escape check.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>player</strong> (<a class="reference internal" href="#logic.player.Player" title="logic.player.Player"><em>Player</em></a>) – Player who is in check.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Whether or not the player can escape check.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.game.Game.get_move_choice">
+<span class="sig-name descname"><span class="pre">get_move_choice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">piece_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moving</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opponent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.game.Game.get_move_choice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the location of the square the player wants to move to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>piece_location</strong> (<em>String</em><em> (</em><em>of len 2 with Column then Row ex A7</em><em>)</em>) – The location of the piece to be moved</p></li>
+<li><p><strong>moving</strong> (<a class="reference internal" href="#logic.player.Player" title="logic.player.Player"><em>Player</em></a>) – Player who is currently trying to move</p></li>
+<li><p><strong>opponent</strong> (<a class="reference internal" href="#logic.player.Player" title="logic.player.Player"><em>Player</em></a>) – Player who is not moving</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The location the player wants to move</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.game.Game.get_piece_choice">
+<span class="sig-name descname"><span class="pre">get_piece_choice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moving</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.game.Game.get_piece_choice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ask the player what piece they want to move.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>moving</strong> (<a class="reference internal" href="#logic.player.Player" title="logic.player.Player"><em>Player</em></a>) – The player whose turn it is</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The location of the piece to move</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>string of length 2 (ex. A7, D8…)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.game.Game.is_checked">
+<span class="sig-name descname"><span class="pre">is_checked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.game.Game.is_checked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if a player checked.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>player</strong> (<a class="reference internal" href="#logic.player.Player" title="logic.player.Player"><em>Player</em></a>) – The player who may or may not be checked.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Whether or not a player is checked</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.game.Game.is_over">
+<span class="sig-name descname"><span class="pre">is_over</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#logic.game.Game.is_over" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether or not the game is over.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Whether or not the game is over</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.game.Game.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#logic.game.Game.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes a single players turn.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.game.Game.move_is_valid">
+<span class="sig-name descname"><span class="pre">move_is_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">piece_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">move_choice</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moving</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opponent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.game.Game.move_is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see if a move is a valid move.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>piece_location</strong> (<em>String</em><em> (</em><em>len 2 with format Column Row ex. A7</em><em>)</em>) – Location of the piece to be moved</p></li>
+<li><p><strong>move_choice</strong> (<em>String</em><em> (</em><em>len 2 with format Column Row ex. A7</em><em>)</em>) – Where the player wants to move to</p></li>
+<li><p><strong>moving</strong> (<a class="reference internal" href="#logic.player.Player" title="logic.player.Player"><em>Player</em></a>) – Player who is moving</p></li>
+<li><p><strong>opponnent</strong> – Player not moving</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Whether or not the move is valid</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.game.Game.move_piece">
+<span class="sig-name descname"><span class="pre">move_piece</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">piece_choice</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">move_choice</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moving</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opponent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.game.Game.move_piece" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves a piece between two squares. Captures opponent’s piece should
+it exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>piece_choice</strong> (<em>String</em><em> (</em><em>Two chars long. Column Row ex. A7</em><em>, </em><em>D8</em><em>...</em><em>)</em>) – The location of the piece to move.</p></li>
+<li><p><strong>move_choice</strong> (<em>String</em><em> (</em><em>Two chars long. Column Row ex. A7</em><em>, </em><em>D8</em><em>...</em><em>)</em>) – The location of the square to move to.</p></li>
+<li><p><strong>moving</strong> (<a class="reference internal" href="#logic.player.Player" title="logic.player.Player"><em>Player</em></a>) – The player whose turn it is.</p></li>
+<li><p><strong>opponent</strong> (<a class="reference internal" href="#logic.player.Player" title="logic.player.Player"><em>Player</em></a>) – The player not moving.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.game.Game.parse_board_choice">
+<span class="sig-name descname"><span class="pre">parse_board_choice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">move_choice</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.game.Game.parse_board_choice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes in a valid move location and returns corresponding x, y
+coords.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>move_choice</strong> – Location being parsed</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>String (must be a valid location)</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>(x, y) tuple</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.game.Game.piece_is_valid">
+<span class="sig-name descname"><span class="pre">piece_is_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">piece_choice</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.game.Game.piece_is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see if the player can move the piece at specified
+location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>piece_choice</strong> (<em>String</em>) – Location of piece to move</p></li>
+<li><p><strong>player</strong> (<a class="reference internal" href="#logic.player.Player" title="logic.player.Player"><em>Player</em></a>) – Player who is currently moving</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None, Boolean, or String (that contains info on why move is
+invalid)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.game.Game.temp_move_is_checked">
+<span class="sig-name descname"><span class="pre">temp_move_is_checked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">piece_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">move_choice</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moving</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opponent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parsed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.game.Game.temp_move_is_checked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temporarily executes a move to see if it puts the mover in a
+checked state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>piece_location</strong> (<em>String</em><em> (</em><em>of len two Ex. E8</em><em>)</em>) – Location of the piece to be moved</p></li>
+<li><p><strong>move_choice</strong> (<em>String</em><em> (</em><em>of len two Ex. E8</em><em>)</em>) – Location the player wants to move to</p></li>
+<li><p><strong>moving</strong> (<a class="reference internal" href="#logic.player.Player" title="logic.player.Player"><em>Player</em></a>) – The player who is executing the move</p></li>
+<li><p><strong>opponent</strong> (<a class="reference internal" href="#logic.player.Player" title="logic.player.Player"><em>Player</em></a>) – The player who is not moving</p></li>
+<li><p><strong>parsed</strong> (<em>Boolean</em>) – Optional argument stating whether or not move_choice
+and piece_location have already been converted to x, y
+values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Whether or not a move leaves the player checked</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.game.Game.valid_board_location">
+<span class="sig-name descname"><span class="pre">valid_board_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.game.Game.valid_board_location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see if a location is a valid board location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>location</strong> (<em>String</em>) – The location being checked</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Whether or not a move leaves a player checked.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-logic.player">
+<span id="logic-player-module"></span><h2>logic.player module<a class="headerlink" href="#module-logic.player" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="logic.player.Player">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">logic.player.</span></span><span class="sig-name descname"><span class="pre">Player</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.player.Player" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Player class. Could be extended to include things like a name, record,
+etc. Currently keeps track of the players pieces and their color.</p>
+</dd></dl>
+
+</section>
+<section id="module-logic.square">
+<span id="logic-square-module"></span><h2>logic.square module<a class="headerlink" href="#module-logic.square" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="logic.square.Square">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">logic.square.</span></span><span class="sig-name descname"><span class="pre">Square</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">piece</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logic.square.Square" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Square class that emulates a square you would see on a chess board. A
+square can possible hold a piece and the square will be either white or
+black.</p>
+</dd></dl>
+
+</section>
+<section id="module-logic">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-logic" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">logic package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-logic.board">logic.board module</a></li>
+<li><a class="reference internal" href="#module-logic.colors">logic.colors module</a></li>
+<li><a class="reference internal" href="#module-logic.game">logic.game module</a></li>
+<li><a class="reference internal" href="#module-logic.player">logic.player module</a></li>
+<li><a class="reference internal" href="#module-logic.square">logic.square module</a></li>
+<li><a class="reference internal" href="#module-logic">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="previous chapter">logic</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="logic.pieces.html"
+                        title="next chapter">logic.pieces package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/logic.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="logic.pieces.html" title="logic.pieces package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="logic"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Terminal Chess 0.1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >logic</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">logic package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Chris Surran.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+    </div>
+  </body>
+</html>
