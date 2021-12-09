@@ -45,9 +45,8 @@ class Pawn(Piece):
             if board.board[pos_y][old_x].piece is None:
                 if y == 1:
                     possible_moves.add((old_x, pos_y))
-                elif y == 2 and \
-                        board.board[pos_y - delta][old_x].piece is None:
-                    possible_moves.add((old_x, pos_y))
+            else:
+                break
 
         # This generates caputuring moves.
         for x in [-1, 1]:
