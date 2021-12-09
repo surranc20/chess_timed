@@ -1,0 +1,69 @@
+logic.pieces package
+====================
+
+Submodules
+----------
+
+logic.pieces.bishop module
+--------------------------
+
+.. automodule:: logic.pieces.bishop
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+logic.pieces.king module
+------------------------
+
+.. automodule:: logic.pieces.king
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+logic.pieces.knight module
+--------------------------
+
+.. automodule:: logic.pieces.knight
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+logic.pieces.pawn module
+------------------------
+
+.. automodule:: logic.pieces.pawn
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+logic.pieces.piece module
+-------------------------
+
+.. automodule:: logic.pieces.piece
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+logic.pieces.queen module
+-------------------------
+
+.. automodule:: logic.pieces.queen
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+logic.pieces.rook module
+------------------------
+
+.. automodule:: logic.pieces.rook
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: logic.pieces
+   :members:
+   :undoc-members:
+   :show-inheritance:

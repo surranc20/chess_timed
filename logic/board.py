@@ -14,6 +14,7 @@ class Board:
     def __init__(self, player_1, player_2):
         """Creates a board object and initializes/assigns all the chess
         pieces.
+
         :param player_1: The player using the white pieces
         :type player_1: Player
         :param player_2: The player using the black pieces
@@ -46,6 +47,7 @@ class Board:
 
     def __repr__(self):
         """Returns the str version of the board.
+
         :returns: Str version of the board
         :rtype: String
         """
@@ -60,6 +62,7 @@ class Board:
 
     def place_initial_pieces(self):
         """"Creates a dictionary with chess pieces and their start locations.
+
         :returns: Dictionary with pieces and their locations
         :rtype: Dictionary
         """
@@ -77,6 +80,7 @@ class Board:
 
     def move_on_board(self, x, y):
         """Checks to see if a move is on the board
+
         :param x: X location
         :type x: Int
         :param y: Y location

@@ -8,6 +8,7 @@ class Game:
 
     def __init__(self, board, player_1, player_2):
         """Creates a game object.
+
         :param board: The board the game will be played on.
         :type board: Board
         :param player_1: Player who will go first and use the white pieces.
@@ -63,6 +64,7 @@ class Game:
     def move_piece(self, piece_choice, move_choice, moving, opponent):
         """Moves a piece between two squares. Captures opponent's piece should
         it exist.
+
         :param piece_choice: The location of the piece to move.
         :type piece_choice: String (Two chars long. Column Row ex. A7, D8...)
         :param move_choice: The location of the square to move to.
@@ -95,6 +97,7 @@ class Game:
 
     def get_piece_choice(self, moving):
         """Ask the player what piece they want to move.
+
         :param moving: The player whose turn it is
         :type moving: Player
 
@@ -187,6 +190,7 @@ class Game:
 
     def move_is_valid(self, piece_location, move_choice, moving, opponent):
         """Checks to see if a move is a valid move.
+
         :param piece_location: Location of the piece to be moved
         :type piece_location: String (len 2 with format Column Row ex. A7)
         :param move_choice: Where the player wants to move to
@@ -230,6 +234,7 @@ class Game:
                              moving, opponent, parsed=False):
         """Temporarily executes a move to see if it puts the mover in a
         checked state.
+
         :param piece_location: Location of the piece to be moved
         :type piece_location: String (of len two Ex. E8)
         :param move_choice: Location the player wants to move to
@@ -239,7 +244,8 @@ class Game:
         :param opponent: The player who is not moving
         :type opponent: Player
         :param parsed: Optional argument stating whether or not move_choice
-        and piece_location have already been converted to x, y values.
+                       and piece_location have already been converted to x, y
+                       values.
         :type parsed: Boolean
         :returns: Whether or not a move leaves the player checked
         :rtype: Boolean
@@ -282,6 +288,7 @@ class Game:
 
     def valid_board_location(self, location):
         """Checks to see if a location is a valid board location.
+
         :param location: The location being checked
         :type location: String
         :returns: Whether or not a move leaves a player checked.
@@ -298,6 +305,7 @@ class Game:
     def parse_board_choice(self, move_choice):
         """Takes in a valid move location and returns corresponding x, y
         coords.
+
         :param move_choice: Location being parsed
         :type: String (must be a valid location)
         :returns: (x, y) tuple
@@ -308,6 +316,7 @@ class Game:
 
     def is_checked(self, player):
         """Check to see if a player checked.
+
         :param player: The player who may or may not be checked.
         :type player: Player
         :returns: Whether or not a player is checked
@@ -337,6 +346,7 @@ class Game:
 
     def can_escape(self, player):
         """Determines whether or not a player can escape check.
+
         :param player: Player who is in check.
         :type player: Player
         :returns: Whether or not the player can escape check.
