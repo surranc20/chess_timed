@@ -1,7 +1,10 @@
 /.vscode
 /Makefile
-/__pycache__
+**/__pycache__/
 /build
 /env
 /make.bat
-/source
+/docs/source/
+/docs/build/
+/docs/make.bat
+/docs/Makefile
