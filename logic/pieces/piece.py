@@ -1,10 +1,12 @@
 from ..colors import Colors
+from abc import ABC, abstractmethod
 
 
-class Piece:
+class Piece(ABC):
     """Abstract class that all chess pieces will extend. Keeps track of a
     pieces color, unicode value, and can test to see if a move is valid."""
 
+    @abstractmethod
     def __init__(self, color):
         """Create a piece with a certain color.
         :param color: The color of a chess piece
@@ -48,6 +50,7 @@ class Piece:
         else:
             return False
 
+    @abstractmethod
     def generate_possible_moves(self, board, old_x, old_y):
         """Generates all possible moves that a piece can make. It does not
         check to see if the move will leave a player checked. So not every
