@@ -6,6 +6,7 @@ class Piece:
         self.color = color
         self.white_unicode_val = None
         self.black_unicode_val = None
+        self.moved = False
 
     def __repr__(self):
         if self.color == Colors.WHITE:
