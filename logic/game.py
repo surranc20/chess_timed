@@ -91,6 +91,8 @@ class Game:
         self.board.board[py][px].piece = None
         self.board.board[my][mx].piece = piece
 
+        piece.moved = True
+
     def get_piece_choice(self, moving):
         """Ask the player what piece they want to move.
         :param moving: The player whose turn it is
@@ -226,15 +228,36 @@ class Game:
 
     def temp_move_is_checked(self, piece_location, move_choice,
                              moving, opponent, parsed=False):
+        """Temporarily executes a move to see if it puts the mover in a
+        checked state.
+        :param piece_location: Location of the piece to be moved
+        :type piece_location: String (of len two Ex. E8)
+        :param move_choice: Location the player wants to move to
+        :type move_choice: String (of len two Ex. E8)
+        :param moving: The player who is executing the move
+        :type moving: Player
+        :param opponent: The player who is not moving
+        :type opponent: Player
+        :param parsed: Optional argument stating whether or not move_choice
+        and piece_location have already been converted to x, y values.
+        :type parsed: Boolean
+        :returns: Whether or not a move leaves the player checked
+        :rtype: Boolean
+        """
+        # Check to see if locations have been parsed and parse them if they
+        # have not.
         if not parsed:
             px, py = self.parse_board_choice(piece_location)
             mx, my = self.parse_board_choice(move_choice)
         else:
             px, py = piece_location
             mx, my = move_choice
+
+        # Grab the pieces at the two locations.
         piece = self.board.board[py][px].piece
         target_piece = self.board.board[my][mx].piece
 
+        # Move pieces
         moving.pieces[piece] = (mx, my)
         if target_piece is not None:
             opponent.pieces.pop(target_piece)
@@ -242,8 +265,10 @@ class Game:
         self.board.board[py][px].piece = None
         self.board.board[my][mx].piece = piece
 
+        # Check to see if checked
         checked = self.is_checked(moving)
 
+        # Unmove pieces
         moving.pieces[piece] = (px, py)
         if target_piece is not None:
             opponent.pieces[target_piece] = (mx, my)
@@ -256,6 +281,12 @@ class Game:
             return False
 
     def valid_board_location(self, location):
+        """Checks to see if a location is a valid board location.
+        :param location: The location being checked
+        :type location: String
+        :returns: Whether or not a move leaves a player checked.
+        :rtype: Boolean
+        """
         if len(location) != 2:
             return False
         if location[0] not in ["A", "B", "C", "D", "E", "F", "G", "H"]:
@@ -265,19 +296,37 @@ class Game:
         return True
 
     def parse_board_choice(self, move_choice):
+        """Takes in a valid move location and returns corresponding x, y
+        coords.
+        :param move_choice: Location being parsed
+        :type: String (must be a valid location)
+        :returns: (x, y) tuple
+        :rtype: tuple
+        """
         x, y = ord(move_choice[0]) - 65, int(move_choice[1]) - 1
         return (x, y)
 
     def is_checked(self, player):
+        """Check to see if a player checked.
+        :param player: The player who may or may not be checked.
+        :type player: Player
+        :returns: Whether or not a player is checked
+        :rtype: Boolean
+        """
+        # Determine which player is the opponent.
         if player is self.player_1:
             op = self.player_2
         else:
             op = self.player_1
 
+        # Find the location of the king.
         king_loc = None
         for piece in player.pieces:
             if type(piece) is King:
                 king_loc = player.pieces[piece]
+
+        # Iterate over all moves the opponent can make and see if one checks
+        # the player.
 
         for piece, location in op.pieces.items():
             x, y = location
@@ -287,6 +336,12 @@ class Game:
         return False
 
     def can_escape(self, player):
+        """Determines whether or not a player can escape check.
+        :param player: Player who is in check.
+        :type player: Player
+        :returns: Whether or not the player can escape check.
+        :rtype: Boolean
+        """
         if player is self.player_1:
             op = self.player_2
         else:
