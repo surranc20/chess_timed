@@ -7,6 +7,7 @@ class Piece:
 
     def __init__(self, color):
         """Create a piece with a certain color.
+
         :param color: The color of a chess piece
         :type color: Color
         """
@@ -17,6 +18,7 @@ class Piece:
 
     def __repr__(self):
         """Returns the unicode representation of a piece
+
         :returns: Unicode representation of a piece
         :rtype: String
         """
@@ -27,6 +29,7 @@ class Piece:
 
     def move_is_valid(self, board, old_x, old_y, new_x, new_y):
         """Checks to see if a certain move is valid.
+
         :param board: The chess board
         :type board: Board
         :param old_x: The starting x coord of the piece

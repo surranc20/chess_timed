@@ -5,6 +5,7 @@ class Square:
 
     def __init__(self, color, x, y, piece=None):
         """Creates a square with a given color, position, and possible piece.
+
         :param color: Color for the square
         :type color: Should be an enumerated Color value (either Colors.WHITE
                      or Colors.BLACK)
